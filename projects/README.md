@@ -7,7 +7,7 @@ Each project is a real problem encountered, researched, and solved.
 
 | Project | Description | Status |
 |---------|-------------|--------|
-| [homelab-network-setup](https://github.com/farhathmh/homelab-network-setup) | WiFi as WAN using OpenWrt on TP-Link AX23 | In Progress |
+| [openwrt-wifi-as-wan](https://github.com/farhathmh/openwrt-wifi-as-wan) | WiFi as WAN using OpenWrt on TP-Link AX23 v1 - homelab connectivity from shared WiFi | Complete |
 
 ---
 

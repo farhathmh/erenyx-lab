@@ -95,7 +95,7 @@ has a dedicated repository with full documentation.
 
 | Problem | Solution Repo | Status |
 |---------|--------------|--------|
-| No owned internet — needed WiFi as WAN to feed wired homelab LAN | [homelab-network-setup](https://github.com/farhathmh/homelab-network-setup) | In Progress |
+| No owned internet — needed WiFi as WAN to feed wired homelab LAN | [openwrt-wifi-as-wa](https://github.com/farhathmh/openwrt-wifi-as-wan) | In Progress |
 
 > More solutions added as the lab grows.
 
