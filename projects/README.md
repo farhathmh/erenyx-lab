@@ -7,10 +7,15 @@ Each project is a real problem encountered, researched, and solved.
 
 ## Index Controls
 
+<details>
+<summary><strong>Open quick navigation</strong></summary>
+
 | View | Purpose |
 |------|---------|
 | [Active Projects](#active-projects) | Current implementation scope |
 | [Roadmap](#roadmap) | Upcoming project documentation |
+
+</details>
 
 ---
 

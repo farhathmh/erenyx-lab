@@ -18,6 +18,9 @@
 
 ## Quick Controls
 
+<details>
+<summary><strong>Open quick navigation</strong></summary>
+
 | Jump | Purpose |
 |------|---------|
 | [Dashboard](#dashboard-panel) | See current lab health at a glance |
@@ -26,6 +29,8 @@
 | [Network](#network) | Understand routing and topology |
 | [Problems](#documented-problems-and-solutions) | Review solved constraints |
 | [Goals](#goals) | Track upcoming milestones |
+
+</details>
 
 ---
 

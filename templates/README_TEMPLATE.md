@@ -13,6 +13,9 @@
 
 ## Quick Controls
 
+<details>
+<summary><strong>Open quick navigation</strong></summary>
+
 | Jump | Purpose |
 |------|---------|
 | [Dashboard](#dashboard-panel) | Snapshot of project health |
@@ -20,6 +23,8 @@
 | [Implementation](#implementation) | Build and configuration steps |
 | [Validation](#validation) | Checks to confirm success |
 | [Roadmap](#roadmap) | Next milestones |
+
+</details>
 
 ---
 
