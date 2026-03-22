@@ -16,6 +16,54 @@
 
 ---
 
+## Quick Controls
+
+| Jump | Purpose |
+|------|---------|
+| [Dashboard](#dashboard-panel) | See current lab health at a glance |
+| [Hardware](#hardware-inventory) | Check physical inventory and roles |
+| [Services](#what-is-running) | View active workloads |
+| [Network](#network) | Understand routing and topology |
+| [Problems](#documented-problems-and-solutions) | Review solved constraints |
+| [Goals](#goals) | Track upcoming milestones |
+
+---
+
+## Dashboard Panel
+
+> README dashboard view of current lab state.
+
+| Panel | Live State |
+|------|------------|
+| Lab State | ![Lab State](https://img.shields.io/badge/Lab-Operational-0A9396?style=flat-square) |
+| Infra Node | ![Proxmox](https://img.shields.io/badge/Proxmox-HP_Z440-E57000?style=flat-square&logo=proxmox&logoColor=white) |
+| Containers | ![Containers](https://img.shields.io/badge/Containers-20-2496ED?style=flat-square&logo=docker&logoColor=white) |
+| Storage | ![Storage](https://img.shields.io/badge/TrueNAS-Active-0095D5?style=flat-square&logo=truenas&logoColor=white) |
+| Router | ![Router](https://img.shields.io/badge/OpenWrt-AX23_v1-00B5E2?style=flat-square&logo=openwrt&logoColor=white) |
+
+### Dashboard Screenshot
+
+![Erenyx Homepage Dashboard](assets/images/dashboard/erenyx-dashboard-homepage.png)
+
+<details>
+<summary><strong>Open dashboard style snippet (copy and adapt)</strong></summary>
+
+```md
+## Dashboard Panel
+
+| Panel | Live State |
+|------|------------|
+| Lab State | ![Lab State](https://img.shields.io/badge/Lab-Operational-0A9396?style=flat-square) |
+| Containers | ![Containers](https://img.shields.io/badge/Containers-20-2496ED?style=flat-square&logo=docker&logoColor=white) |
+| Router | ![Router](https://img.shields.io/badge/OpenWrt-AX23_v1-00B5E2?style=flat-square&logo=openwrt&logoColor=white) |
+
+![Erenyx Homepage Dashboard](assets/images/dashboard/erenyx-dashboard-homepage.png)
+```
+
+</details>
+
+---
+
 ## What is Erenyx Lab
 
 Erenyx Lab is my personal homelab — a physical infrastructure environment
@@ -95,7 +143,7 @@ has a dedicated repository with full documentation.
 
 | Problem | Solution Repo | Status |
 |---------|--------------|--------|
-| No owned internet — needed WiFi as WAN to feed wired homelab LAN | [openwrt-wifi-as-wa](https://github.com/farhathmh/openwrt-wifi-as-wan) | In Progress |
+| No owned internet - needed WiFi as WAN to feed wired homelab LAN | [openwrt-wifi-as-wan](https://github.com/farhathmh/openwrt-wifi-as-wan) | In Progress |
 
 > More solutions added as the lab grows.
 
@@ -109,6 +157,18 @@ has a dedicated repository with full documentation.
 - [ ] Automated backup solution across all nodes
 - [ ] CI/CD pipeline for homelab configuration management
 - [ ] Document every problem and solution as it happens
+
+<details>
+<summary><strong>Milestone View</strong></summary>
+
+| Track | Stage |
+|------|-------|
+| Network segmentation | Planning |
+| Monitoring stack | Planning |
+| Storage resilience | Research |
+| Infra automation | Backlog |
+
+</details>
 
 ---
 
