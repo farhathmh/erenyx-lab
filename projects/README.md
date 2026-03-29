@@ -10,10 +10,10 @@ Each project is a real problem encountered, researched, and solved.
 <details>
 <summary><strong>Open quick navigation</strong></summary>
 
-| View | Purpose |
-|------|---------|
-| [Active Projects](#active-projects) | Current implementation scope |
-| [Roadmap](#roadmap) | Upcoming project documentation |
+| View                                | Purpose                        |
+| ----------------------------------- | ------------------------------ |
+| [Active Projects](#active-projects) | Current implementation scope   |
+| [Roadmap](#roadmap)                 | Upcoming project documentation |
 
 </details>
 
@@ -21,9 +21,9 @@ Each project is a real problem encountered, researched, and solved.
 
 ## Active Projects
 
-| Project | Description | Status |
-|---------|-------------|--------|
-| [openwrt-wifi-as-wan](https://github.com/farhathmh/openwrt-wifi-as-wan) | WiFi as WAN using OpenWrt on TP-Link AX23 v1 - homelab connectivity from shared WiFi | In Progress |
+| Project                                                                | Description                                                                        | Status    |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | --------- |
+| [wifi-as-wan-bridge](https://github.com/farhathmh/openwrt-wifi-as-wan) | Completed and documented wireless uplink bridge milestone for homelab connectivity | Completed |
 
 ---
 
@@ -32,11 +32,12 @@ Each project is a real problem encountered, researched, and solved.
 <details>
 <summary><strong>Planned additions</strong></summary>
 
-| Planned Project | Focus | Stage |
-|-----------------|-------|-------|
-| Monitoring stack build | Prometheus + Grafana rollout | Planning |
-| VLAN segmentation rollout | Router and host segmentation | Planning |
-| Backup automation | Cross-node snapshots and restore testing | Backlog |
+| Planned Project               | Focus                                              | Stage    |
+| ----------------------------- | -------------------------------------------------- | -------- |
+| Monitoring stack build        | Prometheus + Grafana rollout                       | Planning |
+| VLAN segmentation rollout     | Router and host segmentation                       | Planning |
+| Wireless uplink bridge series | Document multiple WAN-ingress architecture options | Planning |
+| Backup automation             | Cross-node snapshots and restore testing           | Backlog  |
 
 </details>
 

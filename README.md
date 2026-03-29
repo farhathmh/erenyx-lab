@@ -8,7 +8,7 @@
 ![Status](https://img.shields.io/badge/Status-Active-00B4D8?style=for-the-badge)
 ![Proxmox](https://img.shields.io/badge/Proxmox-E57000?style=for-the-badge&logo=proxmox&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![OpenWrt](https://img.shields.io/badge/OpenWrt-00B5E2?style=for-the-badge&logo=openwrt&logoColor=white)
+![OPNsense](https://img.shields.io/badge/OPNsense-F07A13?style=for-the-badge)
 ![TrueNAS](https://img.shields.io/badge/TrueNAS-0095D5?style=for-the-badge&logo=truenas&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
@@ -21,14 +21,14 @@
 <details>
 <summary><strong>Open quick navigation</strong></summary>
 
-| Jump | Purpose |
-|------|---------|
-| [Dashboard](#dashboard-panel) | See current lab health at a glance |
-| [Hardware](#hardware-inventory) | Check physical inventory and roles |
-| [Services](#what-is-running) | View active workloads |
-| [Network](#network) | Understand routing and topology |
-| [Problems](#documented-problems-and-solutions) | Review solved constraints |
-| [Goals](#goals) | Track upcoming milestones |
+| Jump                                           | Purpose                            |
+| ---------------------------------------------- | ---------------------------------- |
+| [Dashboard](#dashboard-panel)                  | See current lab health at a glance |
+| [Hardware](#hardware-inventory)                | Check physical inventory and roles |
+| [Services](#what-is-running)                   | View active workloads              |
+| [Network](#network)                            | Understand routing and topology    |
+| [Problems](#documented-problems-and-solutions) | Review solved constraints          |
+| [Goals](#goals)                                | Track upcoming milestones          |
 
 </details>
 
@@ -38,13 +38,14 @@
 
 > README dashboard view of current lab state.
 
-| Panel | Live State |
-|------|------------|
-| Lab State | ![Lab State](https://img.shields.io/badge/Lab-Operational-0A9396?style=flat-square) |
-| Infra Node | ![Proxmox](https://img.shields.io/badge/Proxmox-HP_Z440-E57000?style=flat-square&logo=proxmox&logoColor=white) |
-| Containers | ![Containers](https://img.shields.io/badge/Containers-20-2496ED?style=flat-square&logo=docker&logoColor=white) |
-| Storage | ![Storage](https://img.shields.io/badge/TrueNAS-Active-0095D5?style=flat-square&logo=truenas&logoColor=white) |
-| Router | ![Router](https://img.shields.io/badge/OpenWrt-AX23_v1-00B5E2?style=flat-square&logo=openwrt&logoColor=white) |
+| Panel        | Live State                                                                                                     |
+| ------------ | -------------------------------------------------------------------------------------------------------------- |
+| Lab State    | ![Lab State](https://img.shields.io/badge/Lab-Operational-0A9396?style=flat-square)                            |
+| Infra Node   | ![Proxmox](https://img.shields.io/badge/Proxmox-HP_Z440-E57000?style=flat-square&logo=proxmox&logoColor=white) |
+| WAN Edge     | ![Firewall](https://img.shields.io/badge/Firewall-OPNsense_VM-F07A13?style=flat-square)                        |
+| Containers   | ![Containers](https://img.shields.io/badge/Containers-20-2496ED?style=flat-square&logo=docker&logoColor=white) |
+| Storage      | ![Storage](https://img.shields.io/badge/TrueNAS-Active-0095D5?style=flat-square&logo=truenas&logoColor=white)  |
+| Access Layer | ![AP](https://img.shields.io/badge/AP%20and%20Switch-AX23-00B5E2?style=flat-square)                            |
 
 ### Dashboard Screenshot
 
@@ -56,11 +57,12 @@
 ```md
 ## Dashboard Panel
 
-| Panel | Live State |
-|------|------------|
-| Lab State | ![Lab State](https://img.shields.io/badge/Lab-Operational-0A9396?style=flat-square) |
-| Containers | ![Containers](https://img.shields.io/badge/Containers-20-2496ED?style=flat-square&logo=docker&logoColor=white) |
-| Router | ![Router](https://img.shields.io/badge/OpenWrt-AX23_v1-00B5E2?style=flat-square&logo=openwrt&logoColor=white) |
+| Panel        | Live State                                                                                                     |
+| ------------ | -------------------------------------------------------------------------------------------------------------- |
+| Lab State    | ![Lab State](https://img.shields.io/badge/Lab-Operational-0A9396?style=flat-square)                            |
+| Containers   | ![Containers](https://img.shields.io/badge/Containers-20-2496ED?style=flat-square&logo=docker&logoColor=white) |
+| WAN Edge     | ![Firewall](https://img.shields.io/badge/Firewall-OPNsense_VM-F07A13?style=flat-square)                        |
+| Access Layer | ![AP](https://img.shields.io/badge/AP%20and%20Switch-AX23-00B5E2?style=flat-square)                            |
 
 ![Erenyx Homepage Dashboard](assets/images/dashboard/erenyx-dashboard-homepage.png)
 ```
@@ -83,13 +85,13 @@ environment. This is real hardware solving real problems.
 
 ## Hardware Inventory
 
-| Device | Role | CPU | RAM | Storage |
-|--------|------|-----|-----|---------|
-| HP Z440 Workstation | Proxmox hypervisor | Xeon E5-2698 v4 (20c/40t) | 64GB DDR4 ECC | 960GB SSD (VMs) + 1.5TB HDD (ISO/backups) + 1TB HDD (TrueNAS passthrough) |
-| Intel NUC8 i7 (NUC1) | Primary Docker server | Core i7-8559U | 24GB | 500GB NVMe |
-| Intel NUC8 i3 (NUC2) | Testing and experiments | Core i3-8109U | 16GB | 500GB NVMe + 500GB SSD |
-| Raspberry Pi 4B | Edge testing / lightweight services | Cortex-A72 (4c) | 8GB | 64GB MicroSD |
-| TP-Link AX23 (OpenWrt) | Core router / network controller | — | — | Custom OpenWrt firmware |
+| Device               | Role                                 | CPU                       | RAM           | Storage                                                                   |
+| -------------------- | ------------------------------------ | ------------------------- | ------------- | ------------------------------------------------------------------------- |
+| HP Z440 Workstation  | Proxmox hypervisor                   | Xeon E5-2698 v4 (20c/40t) | 64GB DDR4 ECC | 960GB SSD (VMs) + 1.5TB HDD (ISO/backups) + 1TB HDD (TrueNAS passthrough) |
+| Intel NUC8 i7 (NUC1) | Primary Docker server                | Core i7-8559U             | 24GB          | 500GB NVMe                                                                |
+| Intel NUC8 i3 (NUC2) | Testing and experiments              | Core i3-8109U             | 16GB          | 500GB NVMe + 500GB SSD                                                    |
+| Raspberry Pi 4B      | Edge testing / lightweight services  | Cortex-A72 (4c)           | 8GB           | 64GB MicroSD                                                              |
+| TP-Link AX23         | LAN switch and wireless access point | -                         | -             | AP mode for Erenyx WiFi                                                   |
 
 > All hardware acquired from the second-hand market — proof that a serious
 > lab does not require a serious budget.
@@ -100,10 +102,12 @@ environment. This is real hardware solving real problems.
 
 ### HP Z440 — Proxmox Host
 
-| VM | Purpose | Status |
-|----|---------|--------|
-| EVE-NG CE | Network simulation and CCNA/CCNP lab environment | Active |
-| TrueNAS CE | Network attached storage with PCIe passthrough HDD | Active |
+| VM                    | Purpose                                                                                                 | Status |
+| --------------------- | ------------------------------------------------------------------------------------------------------- | ------ |
+| Alpine WiFi Bridge VM | PCIe WiFi passthrough VM connected to shared WiFi, performs WiFi-to-eth0 NAT bridge toward OPNsense WAN | Active |
+| OPNsense Firewall VM  | WAN edge firewall for the full lab, WAN from Alpine bridge and LAN on Proxmox virtual bridge            | Active |
+| EVE-NG CE             | Network simulation and CCNA/CCNP lab environment                                                        | Active |
+| TrueNAS CE            | Network attached storage with PCIe passthrough HDD                                                      | Active |
 
 > Planning: Additional 1TB HDD for TrueNAS RAID testing and redundancy experiments.
 
@@ -130,14 +134,17 @@ Future role being planned as the lab evolves.
 
 ## Network
 
-| Segment | Details |
-|---------|---------|
-| Router | TP-Link AX23 running OpenWrt custom firmware |
-| WAN | Upstream WiFi connection — no owned ISP line |
-| LAN | All homelab devices on wired LAN |
-| VLANs | Planned — segmentation by device role |
+| Segment           | Details                                                                            |
+| ----------------- | ---------------------------------------------------------------------------------- |
+| WAN Source        | Shared upstream WiFi connection - no owned ISP line                                |
+| WiFi Bridge       | Alpine WiFi Bridge VM uses PCIe WiFi passthrough and bridges WiFi to eth0 with NAT |
+| Firewall          | OPNsense VM is the WAN edge for the entire lab                                     |
+| LAN Core          | OPNsense LAN is connected to Proxmox management virtual bridge                     |
+| Access Layer      | TP-Link Archer AX23 is connected to physical NIC and serves as switch plus AP      |
+| Connected Devices | NAS, NUC1, NUC2, Raspberry Pi 4B, and laptop clients via Erenyx WiFi               |
+| VLANs             | Planned — segmentation by device role                                              |
 
-> Full network topology and OpenWrt configuration → [network/topology.md](network/topology.md)
+> Full network topology and routing flow -> [network/topology.md](network/topology.md)
 
 ---
 
@@ -146,9 +153,11 @@ Future role being planned as the lab evolves.
 The core of this repository. Every real problem encountered in this lab
 has a dedicated repository with full documentation.
 
-| Problem | Solution Repo | Status |
-|---------|--------------|--------|
-| No owned internet - needed WiFi as WAN to feed wired homelab LAN | [openwrt-wifi-as-wan](https://github.com/farhathmh/openwrt-wifi-as-wan) | In Progress |
+| Problem                                                                          | Solution Repo                                                                   | Status    |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------- |
+| No owned internet - built a wireless uplink bridge path for homelab connectivity | [wireless-uplink-bridge-docs](https://github.com/farhathmh/openwrt-wifi-as-wan) | Completed |
+
+> Next: wireless uplink bridge series documentation with additional architecture options.
 
 > More solutions added as the lab grows.
 
@@ -166,12 +175,12 @@ has a dedicated repository with full documentation.
 <details>
 <summary><strong>Milestone View</strong></summary>
 
-| Track | Stage |
-|------|-------|
+| Track                | Stage    |
+| -------------------- | -------- |
 | Network segmentation | Planning |
-| Monitoring stack | Planning |
-| Storage resilience | Research |
-| Infra automation | Backlog |
+| Monitoring stack     | Planning |
+| Storage resilience   | Research |
+| Infra automation     | Backlog  |
 
 </details>
 
